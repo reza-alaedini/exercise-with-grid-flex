@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGray: #7c7c7c;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 3s linear;
+  --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
+}
+body {
+  font-family: "Titillium Web";
+  background-color: var(--bodyColor);
+}
+/* Navbar */
+.navbar {
+  background-color: var(--secondaryColor);
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.navbar-items {
+  display: flex;
+  max-width: 1170px;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+.navbar-items span i,
+.navbar-items p {
+  font-size: 1.5rem;
+}
+.menu-icon {
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+.cart-icon {
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+.buy-tag {
+  position: absolute;
+  background-color: var(--mainRed);
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mainWhite);
+  border-radius: 100%;
+  top: -8px;
+  right: -8px;
+}
+/* End of Navbar */
+/* Products */
+.products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.products-container p {
+  font-size: 1.5rem;
+  margin: 1rem 0px;
+}
+.products-center {
+  width: 100%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 3.5rem;
+  padding: 0px 20px;
+}
+.single-product {
+  background-color: var(--mainWhite);
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.product-details {
+  display: flex;
+  justify-content: space-around;
+}
+.add-btn {
+  background-color: var(--secondaryColor);
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  color: var(--primaryColor);
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 1rem;
+  cursor: pointer;
+}
+/* End of Products */
+/* Menu */
+.menu {
+  /* height: 50%; */
+  width: 30%;
+  background-color: var(--secondaryColor);
+  position: fixed;
+  display: none;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  animation: fade-in 1s forwards;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  list-style-type: none;
+  transition: var(--mainTransition);
+}
+.menu ul li {
+  margin-top: 2rem;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: var(--primaryColor);
+}
+.close-icon {
+  margin-top: 3rem;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+/* End of Menu */
